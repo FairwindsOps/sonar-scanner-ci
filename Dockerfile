@@ -27,6 +27,10 @@ ENV PATH="/sonar-scanner-3.3.0.1492-linux/bin:${PATH}"
 # Install Golang
 ADD https://dl.google.com/go/go1.12.linux-amd64.tar.gz /
 RUN tar -C /usr/local -xzf /go1.12.linux-amd64.tar.gz
+
+# Setup some go directories and env
+RUN mkdir -p /go
+ENV GOPATH="/go"
 ENV PATH="/usr/local/go/bin/:${GOPATH}/bin:${PATH}"
 
 # Install dep and golint
