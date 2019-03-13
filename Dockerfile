@@ -2,6 +2,8 @@ FROM openjdk:8-slim
 
 # Install tools
 RUN apt-get update \
+        && apt-get upgrade-y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' \
+        && apt-get dist-upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' \
         && apt-get -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' install \
         curl \
         git \
