@@ -20,8 +20,11 @@ jobs:
       - checkout
       - setup_remote_docker
       - *set_environment_variables
-      - docker-build -f deploy/build.config
-      - docker-push -f deploy/build.config
+      - run:
+          name: Build and Push
+          command: | 
+            docker-build -f deploy/build.config
+            docker-push -f deploy/build.config
 
 workflows:
   version: 2
