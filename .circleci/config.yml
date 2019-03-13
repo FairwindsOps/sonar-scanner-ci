@@ -11,7 +11,7 @@ references:
         echo 'export CI_TAG=$CIRCLE_TAG' >> ${BASH_ENV}
 
 jobs:
-  build:
+  build-and-push:
     docker:
       - image: quay.io/reactiveops/ci-images:v7-alpine
     environment: ~
