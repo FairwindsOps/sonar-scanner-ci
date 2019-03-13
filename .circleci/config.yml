@@ -22,7 +22,8 @@ jobs:
       - *set_environment_variables
       - run:
           name: Build and Push
-          command: | 
+          command: |
+            docker login -u="reactiveops+circleci" -p="${quay_token}" quay.io
             docker-build -f deploy/build.config
             docker-push -f deploy/build.config
 
