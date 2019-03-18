@@ -15,6 +15,9 @@
 
 FROM openjdk:8-slim
 
+LABEL license=Apache-2.0
+LABEL maintainer=ReactiveOps
+
 # Install tools
 RUN apt-get update \
         && apt-get upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' \
