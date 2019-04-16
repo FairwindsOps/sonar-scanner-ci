@@ -26,6 +26,7 @@ RUN apt-get update \
         curl \
         git \
         gcc \
+        make \
         software-properties-common \
         apt-transport-https \
         gnupg2
