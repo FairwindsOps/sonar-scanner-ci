@@ -1,4 +1,4 @@
-# Copyright 2019 ReactiveOps Inc
+# Copyright 2019 FairwindsOps Inc
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 FROM openjdk:8-slim
 
 LABEL license=Apache-2.0
-LABEL maintainer=ReactiveOps
+LABEL maintainer=Fairwinds
 
 # Install tools
 RUN apt-get update \
