@@ -29,6 +29,7 @@ RUN apt-get update \
         make \
         software-properties-common \
         apt-transport-https \
+        unzip \
         gnupg2
 
 # Install the node apt sources and then install nodejs
