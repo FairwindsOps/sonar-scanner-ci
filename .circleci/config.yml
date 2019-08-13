@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Build and Push
           command: |
-            docker login -u="reactiveops+circleci" -p="${quay_token}" quay.io
+            docker login -u="fairwinds+circleci" -p="${fairwinds_quay_token}" quay.io
             docker-build -f deploy/build.config
             docker-push -f deploy/build.config
 
